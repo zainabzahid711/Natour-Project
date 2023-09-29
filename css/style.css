@@ -33,8 +33,8 @@ body{
   padding: 2.5rem 0rem 0rem 2.5rem;
 }
 .header-logo{
-  width: 5rem;
-  opacity: 0.8;
+  width: 4.3rem;
+  /* opacity: 0.8; */
 }
 .header-textbox{
   position: absolute;
