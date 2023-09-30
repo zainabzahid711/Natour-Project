@@ -34,3 +34,35 @@ body{
     animation: moveInRight 1s ease-out;
   }
 }
+
+
+.heading-secondry{
+  font-size: 2.1875rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(to right, $primary-color-light, $primary-color-dark);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: .125rem;
+  transition: all .2s;
+
+  &:hover{
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: .5rem 1rem 2rem rgba($color: $color-black, $alpha: 0.5) ;    
+  }
+}
+
+.heading-tartiary{
+  font-size: 1.2rem;
+  font-size: 700;
+  text-transform: uppercase;
+}
+.paragraph{
+  font-size: 1.0rem;
+
+  &:not(:last-child){
+    margin-bottom: 1.875rem;
+  }
+}
