@@ -1,0 +1,133 @@
+.card{
+
+  perspective: 650rem;
+  -moz-perspective: 50rem;
+  height: 35rem ;
+  position: relative;
+
+  &_side{
+  background-color: orangered;
+  width: 20rem;
+  height: 35rem ;
+  transition: all .8s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  border-radius: 3px;
+  // beacuse img is overflowing the parent element
+  overflow: hidden;
+  box-shadow: 0 1.5rem 3rem rgba($color: $color-black, $alpha: .15);
+
+  &--front{
+    background-color: $white-text-color;
+
+  }
+  &--back{
+    background-color: cadetblue;
+    transform: rotateY(-180deg);
+    &-1{
+      background-image: linear-gradient(to right bottom, $color-secondry-light, $color-secondry-dark);
+    }
+  }
+  }
+
+  &:hover &_side--front{
+    transform: rotateY(180deg);
+  }
+  &:hover &_side--back{
+    transform: rotateY(0);
+  }
+
+  // front side styling
+  &-picture{
+    background-size: cover;
+    height: 14rem;
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    
+
+    &-1{
+      background-image: linear-gradient(to right bottom, $color-secondry-light, $color-secondry-dark)
+      ,url(../images/nat-5.jpg);
+
+    }
+
+    &-2{
+      background-image: url(../images/nat-5.jpg);
+    }
+
+    &-3{
+      background-image: url(../images/nat-5.jpg);
+    }
+
+  }
+  
+  &-heading{
+    font-size: 1.4rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: $white-text-color;
+    position: absolute;
+    text-align: right;
+    top: 9rem;
+    right: 1rem;
+    width: 50%;
+
+  }
+  &-heading-span{
+    padding: .3rem 1rem .6rem 1rem;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+
+    &-1{
+    background-image: linear-gradient(to right bottom,
+    rgba($color-secondry-light, 0.85), rgba($color-secondry-dark, 0.85));
+
+    }
+  }
+  &-details{
+    padding: 2rem;
+
+    ul{
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+
+      li{
+        text-align: center;
+        font-size: 1rem;
+        padding: 1rem;
+        
+        &:not(:last-child){
+          border-bottom: 1px solid $color-grey-light-1;
+        }
+      }
+    }
+  }
+
+  // front side
+  &-cta{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -90%);
+    width: 70%;
+    text-align: center;
+  }
+  &-price-box{
+    text-align: center;
+    color: $white-text-color;
+    margin-bottom: 4rem;
+  }
+  &-price-only{
+    font-size: .9rem;
+    text-transform: uppercase;
+  }
+  &-price-value{
+    font-size: 4rem;
+    font-weight: normal;
+    font-stretch: narrower;
+  }
+}
