@@ -78,7 +78,7 @@ body {
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.5); }
 
 .heading-tartiary {
-  font-size: 1.2rem;
+  font-size: 1.0rem;
   font-size: 700;
   text-transform: uppercase; }
 
@@ -166,7 +166,8 @@ body {
     border-radius: 2px;
     position: absolute;
     z-index: 10;
-    transition: all .2s; }
+    transition: all .2s;
+    outline-offset: 1.5rem; }
     .composition-photo--p1 {
       left: 0;
       top: -1rem; }
@@ -177,9 +178,32 @@ body {
       left: 20%;
       top: 7rem; }
     .composition-photo:hover {
-      transform: scale(1.05);
+      outline: 1rem solid #55c57a;
+      transform: scale(1.05) translateY(-0.5rem);
       box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.5);
       z-index: 20; }
+  .composition:hover .composition-photo:not(:hover) {
+    transform: scale(0.91); }
+
+.feature-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  padding: 1.6rem;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 3.5rem 4rem rgba(0, 0, 0, 0.15);
+  transition: transform .3s; }
+  .feature-box--icon {
+    font-size: 4rem;
+    margin-bottom: .4rem;
+    display: inline-block;
+    background-image: linear-gradient(to right, #7ed56f, #28b485);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; }
+  .feature-box:hover {
+    transform: translateY(-1.3rem) scale(1.03); }
 
 .header {
   position: relative;
@@ -229,5 +253,14 @@ body {
 
 .section-about {
   background-color: #f7f7f7;
-  padding: 25rem 0;
+  padding: 18.75rem 0rem 30rem 0rem;
   margin-top: -20vh; }
+
+.section-features {
+  padding: 15rem 0rem 30rem 0rem;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../images/nat-4.jpg);
+  background-size: cover;
+  transform: skewY(-7deg);
+  margin-top: -5rem; }
+  .section-features > * {
+    transform: skewY(7deg); }
