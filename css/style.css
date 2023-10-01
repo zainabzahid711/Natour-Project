@@ -205,6 +205,93 @@ body {
   .feature-box:hover {
     transform: translateY(-1.3rem) scale(1.03); }
 
+.card {
+  perspective: 650rem;
+  -moz-perspective: 50rem;
+  height: 35rem;
+  position: relative; }
+  .card_side {
+    background-color: orangered;
+    width: 20rem;
+    height: 35rem;
+    transition: all .8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.15); }
+    .card_side--front {
+      background-color: #ffff; }
+    .card_side--back {
+      background-color: cadetblue;
+      transform: rotateY(-180deg); }
+      .card_side--back-1 {
+        background-image: linear-gradient(to right bottom, #ffb900, #ff773e); }
+  .card:hover .card_side--front {
+    transform: rotateY(180deg); }
+  .card:hover .card_side--back {
+    transform: rotateY(0); }
+  .card-picture {
+    background-size: cover;
+    height: 14rem;
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+    .card-picture-1 {
+      background-image: linear-gradient(to right bottom, #ffb900, #ff773e), url(../images/nat-5.jpg); }
+    .card-picture-2 {
+      background-image: url(../images/nat-5.jpg); }
+    .card-picture-3 {
+      background-image: url(../images/nat-5.jpg); }
+  .card-heading {
+    font-size: 1.4rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #ffff;
+    position: absolute;
+    text-align: right;
+    top: 9rem;
+    right: 1rem;
+    width: 50%; }
+  .card-heading-span {
+    padding: .3rem 1rem .6rem 1rem;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone; }
+    .card-heading-span-1 {
+      background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 62, 0.85)); }
+  .card-details {
+    padding: 2rem; }
+    .card-details ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto; }
+      .card-details ul li {
+        text-align: center;
+        font-size: 1rem;
+        padding: 1rem; }
+        .card-details ul li:not(:last-child) {
+          border-bottom: 1px solid #eee; }
+  .card-cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -90%);
+    width: 70%;
+    text-align: center; }
+  .card-price-box {
+    text-align: center;
+    color: #ffff;
+    margin-bottom: 4rem; }
+  .card-price-only {
+    font-size: .9rem;
+    text-transform: uppercase; }
+  .card-price-value {
+    font-size: 4rem;
+    font-weight: normal;
+    font-stretch: narrower; }
+
 .header {
   position: relative;
   height: 95vh;
@@ -264,3 +351,8 @@ body {
   margin-top: -5rem; }
   .section-features > * {
     transform: skewY(7deg); }
+
+.section-tours {
+  background-color: #f7f7f7;
+  padding: 18.75rem 0rem 50rem 0rem;
+  margin-top: -20vh; }
