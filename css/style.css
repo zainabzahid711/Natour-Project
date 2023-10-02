@@ -93,8 +93,20 @@ body {
 .u-margin-bottom-big {
   margin-bottom: 5rem; }
 
+.u-margin-bottom-medium {
+  margin-bottom: 2rem; }
+
 .u-margin-bottom-small {
   margin-bottom: 1.25rem; }
+
+.u-margin-top-big {
+  margin-top: 8rem; }
+
+.u-margin-top-huge {
+  margin-top: 40rem; }
+
+.u-margin-top-medium {
+  margin-top: 3rem; }
 
 .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -122,6 +134,12 @@ body {
   color: #777; }
   .btn-header::after {
     background-color: #ffff; }
+
+.btn-green {
+  background-color: #55c57a;
+  color: #ffff; }
+  .btn-green::after {
+    background-color: #55c57a; }
 
 .btn::after {
   content: "";
@@ -212,7 +230,7 @@ body {
   position: relative; }
   .card_side {
     background-color: orangered;
-    width: 20rem;
+    width: 23rem;
     height: 35rem;
     transition: all .8s ease;
     position: absolute;
@@ -225,10 +243,13 @@ body {
     .card_side--front {
       background-color: #ffff; }
     .card_side--back {
-      background-color: cadetblue;
       transform: rotateY(-180deg); }
       .card_side--back-1 {
         background-image: linear-gradient(to right bottom, #ffb900, #ff773e); }
+      .card_side--back-2 {
+        background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+      .card_side--back-3 {
+        background-image: linear-gradient(to right bottom, #2998ff, #5643fa); }
   .card:hover .card_side--front {
     transform: rotateY(180deg); }
   .card:hover .card_side--back {
@@ -238,13 +259,15 @@ body {
     height: 14rem;
     background-blend-mode: screen;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px; }
     .card-picture-1 {
       background-image: linear-gradient(to right bottom, #ffb900, #ff773e), url(../images/nat-5.jpg); }
     .card-picture-2 {
-      background-image: url(../images/nat-5.jpg); }
+      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url(../images/nat-6.jpg); }
     .card-picture-3 {
-      background-image: url(../images/nat-5.jpg); }
+      background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url(../images/nat-7.jpg); }
   .card-heading {
     font-size: 1.4rem;
     font-weight: 300;
@@ -261,6 +284,10 @@ body {
     -webkit-box-decoration-break: clone; }
     .card-heading-span-1 {
       background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 62, 0.85)); }
+    .card-heading-span-2 {
+      background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.85), rgba(40, 180, 133, 0.85)); }
+    .card-heading-span-3 {
+      background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.85), rgba(86, 67, 250, 0.85)); }
   .card-details {
     padding: 2rem; }
     .card-details ul {
@@ -274,11 +301,12 @@ body {
         .card-details ul li:not(:last-child) {
           border-bottom: 1px solid #eee; }
   .card-cta {
+    margin-top: 4rem;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -90%);
-    width: 70%;
+    width: 100%;
     text-align: center; }
   .card-price-box {
     text-align: center;
@@ -289,8 +317,142 @@ body {
     text-transform: uppercase; }
   .card-price-value {
     font-size: 4rem;
-    font-weight: normal;
-    font-stretch: narrower; }
+    font-family: "ThinFont", sans-serif;
+    font-weight: 100; }
+
+.story {
+  width: 80%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 4rem rgba(0, 0, 0, 0.7);
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 3px;
+  padding: 4rem;
+  padding-left: 7rem;
+  font-size: 1rem;
+  transform: skewX(-12deg); }
+  .story-shape {
+    width: 10rem;
+    height: 10rem;
+    float: left;
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-3rem) skewX(12deg);
+    position: relative; }
+  .story-img {
+    height: 100%;
+    transform: translateX(-2rem) scale(1.4);
+    backface-visibility: hidden;
+    transition: all .5s; }
+  .story-text {
+    transform: skewX(12deg); }
+  .story-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    color: #ffff;
+    text-transform: uppercase;
+    font-size: 1rem;
+    text-align: center;
+    opacity: 0;
+    transition: all .5s;
+    backface-visibility: hidden; }
+  .story:hover .story-caption {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+  .story:hover .story-img {
+    transform: translateX(-2rem) scale(1);
+    filter: blur(3px) brightness(80%); }
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: .15;
+  overflow: hidden; }
+  .bg-video--content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+
+.form-group:not(:last-child) {
+  margin-bottom: 1rem; }
+
+.form-input {
+  font-family: inherit;
+  color: inherit;
+  font-size: 1rem;
+  padding: 1rem 3rem;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-bottom: 3px solid transparent;
+  width: 90%;
+  display: block;
+  transition: all .3s; }
+  .form-input:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #55c57a; }
+  .form-input:focus:invalid {
+    border-bottom: 3px solid #ff773e; }
+  .form-input::-webkit-input-placeholder {
+    color: #999; }
+
+.form-label {
+  font-size: .8rem;
+  font-weight: 700;
+  margin-left: 2rem;
+  margin-top: .7rem;
+  display: block;
+  transition: all .3s; }
+
+.form-input:placeholder-shown + .form-label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem); }
+
+.form-radio-group {
+  width: 40%;
+  display: inline-block; }
+
+.form-radio-input {
+  display: none; }
+
+.form-radio-label {
+  font-size: 1rem;
+  cursor: pointer;
+  position: relative;
+  padding-left: 3.5rem; }
+
+.form-radio-button {
+  height: 2rem;
+  width: 2rem;
+  border: 5px solid #55c57a;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: 0rem;
+  top: -.5rem; }
+  .form-radio-button::after {
+    content: "";
+    display: block;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(20%, -50%);
+    background-color: #55c57a;
+    opacity: 0;
+    transition: opacity .2s; }
+
+.form-radio-input:checked ~ .form-radio-label .form-radio-button::after {
+  opacity: 1; }
 
 .header {
   position: relative;
@@ -354,5 +516,24 @@ body {
 
 .section-tours {
   background-color: #f7f7f7;
-  padding: 18.75rem 0rem 50rem 0rem;
-  margin-top: -20vh; }
+  padding: 18.75rem 0rem 10rem 0rem;
+  margin-top: -10rem; }
+
+.section-stories {
+  padding: 10.75rem 0rem 8rem 0rem;
+  position: relative; }
+
+.section-book {
+  padding: 10rem 0rem 10rem 0rem;
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+
+.book {
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../images/nat-10.jpg);
+  background-size: 100%;
+  height: 34rem;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  background-repeat: no-repeat; }
+  .book-form {
+    width: 50%;
+    padding: 4rem; }
