@@ -1,6 +1,8 @@
 
 
 .btn{
+
+  &,
   &:link,
   &:visited {
     text-transform: uppercase;
@@ -11,6 +13,11 @@
     transition: all .2s;
     position: relative;
     font-size: $default-font-size;
+    // style for button booking section
+
+
+    border: none;
+    cursor: pointer;
 }
 &:hover{
   transform: translateY(-0.1875rem);
@@ -35,6 +42,20 @@
   }
   
 }
+
+
+
+&-green{
+  background-color: $primary-color;
+  color: $white-text-color;
+
+&::after{
+  background-color: $primary-color;
+}
+
+}
+
+
 
 &::after{
   content: "";

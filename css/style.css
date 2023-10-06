@@ -440,8 +440,8 @@ body {
       padding-left: 7rem; } }
   @media (max-width: 37.5em) {
     .story {
-      width: 100%;
-      padding: 1rem;
+      width: 105%;
+      padding: 4rem;
       transform: skewX(0); } }
   .story-shape {
     width: 10rem;
@@ -462,7 +462,8 @@ body {
     transition: all .5s; }
     @media (max-width: 37.5em) {
       .story-img {
-        height: 70%; } }
+        margin-right: -15px;
+        height: 90%; } }
   .story-text {
     transform: skewX(12deg); }
     @media (max-width: 37.5em) {
@@ -711,7 +712,7 @@ body {
   right: 4.7rem;
   border-radius: 50%;
   z-index: 200;
-  box-shadow: 0 1rem 3rem black;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.4);
   text-align: center;
   cursor: pointer; }
   @media (max-width: 56.25em) {

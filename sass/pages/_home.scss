@@ -1,10 +1,20 @@
 .section-about{
   background-color: $background-color-grey-light;
-  padding: 18.75rem 0rem 30rem 0rem ;
+  padding: 15.75rem 0rem 15rem 0rem ;
   margin-top: -20vh;
+
+
+  @include respond(tab-port){
+    padding: 10rem 0rem 10rem 0rem;
+  }
+
+  
+  @include respond(phone){
+    padding: 17rem 0rem 10rem 0rem;
+  }
 }
 .section-features{
-  padding: 15rem 0rem 30rem 0rem;
+  padding: 12rem 0rem 12rem 0rem;
   background-image: linear-gradient(
     to right bottom,
     rgba($primary-color-light, 0.8),
@@ -16,9 +26,107 @@
   & > *{
     transform: skewY(7deg);
   }
+
+
+  
+  @include respond(tab-port){
+    padding: 6rem 0rem 6rem 0rem;
+  }
+
+  @include respond(tab-port){
+    padding: 6rem 0rem 6rem 0rem;
+  }
+
+
 }
 .section-tours{
   background-color: $background-color-grey-light;
-  padding: 18.75rem 0rem 50rem 0rem ;
-  margin-top: -20vh;
+  padding: 18.75rem 0rem 10rem 0rem;
+  margin-top: -10rem;
+
+
+
+  
+  @include respond(tab-port){
+    padding: 15rem 0rem 5rem 0rem;
+  }
+
+
+
+}
+.section-stories{
+  padding: 10.75rem 0rem 8rem 0rem;
+  position: relative;
+
+
+  
+  @include respond(tab-port){
+    padding: 7rem 0rem 1rem 0rem;
+  }
+
+}
+.section-book{
+  padding: 10rem 0rem 10rem 0rem;
+  background-image: linear-gradient(
+  to right bottom,
+  $primary-color-light,
+  $primary-color-dark);
+
+
+
+  @include respond(tab-port){
+    padding: 8rem 0;
+  }
+
+
+}
+.book{
+  background-image: linear-gradient(105deg,
+  rgba($white-text-color, 0.9) 0%,
+  rgba($white-text-color, 0.9) 50%, transparent 50%),
+  url(../images/nat-10.jpg);
+
+  background-size: 100%;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba($color: $color-black, $alpha: .15);
+  background-repeat: no-repeat;
+ 
+
+
+  @include respond(tab-land){
+    
+  
+        background-image: linear-gradient(105deg,
+        rgba($white-text-color, 0.9) 0%,
+        rgba($white-text-color, 0.9) 65%, transparent 65%),
+        url(../images/nat-10.jpg);
+        background-size: cover;
+  }
+
+
+  @include respond(tab-port){
+
+    background-image: linear-gradient(to right,
+    rgba($white-text-color, 0.9) 0%,
+    rgba($white-text-color, 0.9) 100%),
+    url(../images/nat-10.jpg);
+}
+
+
+
+  &-form{
+    width: 50%;
+    padding: 4rem;
+
+    @include respond(tab-land){
+      width: 65%;
+    }
+
+    @include respond(tab-port){
+      width: 100%;
+    }
+
+
+  }
+
 }

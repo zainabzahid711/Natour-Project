@@ -3,6 +3,40 @@
   padding: 0;
   box-sizing: inherit;
 }
+
+html{
+  font-size: 100%;
+
+
+  
+  @include respond(tab-land){ //1200px
+    font-size: 90%; 
+  }
+
+
+  @include respond(tab-port){ //900px 
+    font-size: 85%; 
+  }
+
+
+  
+  @include respond(phone){ //600px
+    font-size: 80%;
+  }
+
+
+  @include respond(big-desktop){ //1800px
+    font-size: 110%;
+  }
+}
 body{
   box-sizing: border-box;
+  padding: 1.875rem;
+
+  
+  @include respond(tab-port){ //900px 
+    padding: 0;
+  }
+
 }
+
